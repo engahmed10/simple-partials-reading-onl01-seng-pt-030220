@@ -1242,3 +1242,5 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/posts/new" for 104.54.218.220 at 2020-07-18 08:10:48 +0000
+Processing by PostsController#new as HTML
