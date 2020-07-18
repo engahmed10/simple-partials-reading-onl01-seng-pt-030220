@@ -1007,3 +1007,13 @@ Redirected to http://67.205.165.109:39909/posts/10
 Completed 302 Found in 16ms (ActiveRecord: 7.2ms)
 
 
+Started GET "/posts/10" for 104.54.218.220 at 2020-07-18 07:50:19 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
