@@ -1177,3 +1177,10 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 19ms (Views: 11.2ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/posts/new" for 104.54.218.220 at 2020-07-18 07:57:26 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 1.4ms)
+
+
