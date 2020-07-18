@@ -1017,3 +1017,21 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 0.4ms)
 
 
+Started POST "/posts" for 104.54.218.220 at 2020-07-18 07:51:17 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iB3qAGS9RaHr+VUWd/BfH6bJpQ3WGH2ow7DkImP11vGF6pTMGRiZxlzKznHtMeCLdyj5ephYstUtYH3e9aK1SA==", "title"=>"asdas", "description"=>"sgfdfsg", "commit"=>"Submit Post"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" ORDER BY "authors"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "asdas"], ["description", "sgfdfsg"], ["created_at", "2020-07-18 07:51:17.756392"], ["updated_at", "2020-07-18 07:51:17.756392"], ["author_id", 1]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://67.205.165.109:39909/posts/11
+Completed 302 Found in 12ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/posts/11" for 104.54.218.220 at 2020-07-18 07:51:17 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
